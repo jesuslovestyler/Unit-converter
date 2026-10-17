@@ -97,6 +97,33 @@
       white-space: nowrap;
     }
 
+    .intro-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 2px;
+    }
+
+    .home-pill {
+      flex: none;
+      padding: 6px 13px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--accent-text);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .home-pill:hover { background: var(--accent-soft); }
+
+    .home-pill:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+
     .categories {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -281,7 +308,10 @@
   <main class="app">
     <div class="intro">
       <h1>Convert a measurement</h1>
-      <p>Instant, accurate conversions</p>
+      <div class="intro-meta">
+        <p>Instant, accurate conversions</p>
+        <a class="home-pill" href="https://jesuslovestyler.com/">⌂ Home</a>
+      </div>
     </div>
 
     <div class="categories" role="tablist" aria-label="Measurement category">
@@ -508,5 +538,6 @@
       setCategory("volume");
     }());
   </script>
+  <script data-goatcounter="https://jesuslovestyler.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
